@@ -18,10 +18,13 @@ const aInput = document.querySelector('#a-input');
 const bInput = document.querySelector('#b-input');
 const cInput = document.querySelector('#c-input');
 const resultInput = document.querySelector('#d-input');
+const button = document.querySelector('button');
 
 const params = new URLSearchParams(window.location.search);
+
 const typeParam = params.get('type');
-typeInput.value = typeParam;
+
+typeInput.value = typeParam ?? 'filtered';
 
 setValues();
 
@@ -37,3 +40,11 @@ function calculate() {
 
   resultInput.value = result;
 }
+
+function clearResult() {
+  resultInput.value = null;
+}
+
+typeInput.addEventListener('change', setValues);
+cInput.addEventListener('input', clearResult);
+button.addEventListener('click', calculate);

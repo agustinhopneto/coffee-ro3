@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <select name="type" id="type" onchange="setValues()">
+      <select name="type" id="type">
         <option value="filtered" selected>Filtrado</option>
         <option value="frenchPress">Prensa Francesa</option>
         <option value="moka">Cafeteira Italiana (Moka)</option>
@@ -49,11 +49,11 @@
           name="d-input"
           id="d-input"
           disabled
-          placeholder="Resultado"
+          placeholder="Café (g)"
         />
       </div>
 
-      <button type="button" onclick="calculate()">Calcular</button>
+      <button type="button">Calcular</button>
     </div>
 
     <script src="./script.js"></script>
