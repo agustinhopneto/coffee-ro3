@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Coffee Ro3</title>
+  </head>
+  <body>
+    <div class="container">
+      <select name="type" id="type" onchange="setValues()">
+        <option value="filtered" selected>Filtrado</option>
+        <option value="frenchPress">Prensa Francesa</option>
+        <option value="moka">Cafeteira Italiana (Moka)</option>
+      </select>
+
+      <div class="input-group">
+        <input
+          type="number"
+          name="a-input"
+          id="a-input"
+          placeholder="Água (mL)"
+          disabled
+        />
+        <input
+          type="number"
+          name="b-input"
+          id="b-input"
+          placeholder="Café (g)"
+          disabled
+        />
+      </div>
+      <div class="input-group">
+        <input
+          type="number"
+          name="c-input"
+          id="c-input"
+          placeholder="Água (mL)"
+        />
+        <input
+          type="number"
+          name="d-input"
+          id="d-input"
+          disabled
+          placeholder="Resultado"
+        />
+      </div>
+
+      <button type="button" onclick="calculate()">Calcular</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
